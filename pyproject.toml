@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pgm-final-project"
+version = "0.1.0"
+description = "Stacked autoencoder with Monte Carlo dropout classifier for breast cancer subtype prediction."
+readme = "README.md"
+authors = [
+  { name = "Saeed Samimi" },
+  { name = "Hossein NaserTabrizi" },
+]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.22,<2.0",
+  "pandas>=1.5,<2.0",
+  "matplotlib>=3.7,<4.0",
+  "scikit-learn>=1.2,<1.5",
+  "tensorflow>=2.12,<2.16",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "isort",
+  "mypy",
+  "ruff",
+]
+
+[project.scripts]
+pgm-train = "pgm_final_project.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

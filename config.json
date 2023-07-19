@@ -1,0 +1,15 @@
+{
+  "data_path": "normalized_data.csv",
+  "target_column": null,
+  "test_size": 0.3,
+  "random_state": 42,
+  "epochs_autoencoder": 75,
+  "epochs_classifier": 100,
+  "batch_size": 32,
+  "latent_dim": 64,
+  "dropout_rate": 0.4,
+  "monte_carlo_samples": 100,
+  "patience": 10,
+  "learning_rate": 0.001
+}
+
